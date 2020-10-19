@@ -1,1 +1,19 @@
-<p>map-filter works!</p>
+<div class="card text-dark bg-light m-2">
+    <div class="card-header">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="card-body">
+        <p>Se puede ver la ejecución del código en consola</p>
+        <p>En este caso la función de filter es n % 2 == 0, entonces filtrará solo los números pares.</p>
+        <p>Y la función que realiza map es  n * n, entregando el cuadrado de los números que son pares.</p>
+        <p>of : 1, 2, 3, 4, 5</p>
+        <p>filter: {{filter}}</p>
+        <p>map: {{this.map}}</p>
+    </div>
+    <div class="card-footer text-muted">
+        <div  *ngFor="let apunte of apuntes;" class="card">
+            <h4>{{apunte.titulo}}</h4>
+            <p>{{apunte.cuerpo}}</p>
+        </div>
+    </div>
+</div>

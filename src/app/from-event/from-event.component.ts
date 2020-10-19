@@ -43,7 +43,8 @@ export class FromEventComponent implements OnInit {
   agregarApuntes(){
     let apunte = new Apunte()
     apunte.titulo = "fromEvent"
-    apunte.cuerpo = "Algo"
+    apunte.cuerpo = "fromEvent se utiliza para subscribirse a eventos del DOM. Puede ser utilizado junto a ViewChild. Sus parámetros de entrada son"
+    apunte.cuerpo += " 1 -> el elemento del DOM, en este caso es this.element.nativeElement y 2 -> el evento en si, en este caso 'mousemove'"
     this.apuntes.push(apunte)
   }
 }

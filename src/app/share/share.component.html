@@ -1,1 +1,23 @@
-<p>share works!</p>
+<div class="card text-dark bg-light m-2">
+    <div class="card-header">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="card-body">
+        <h3>Sharedless Timer</h3>
+        <p *ngFor="let time of sharelessTimer">{{time}}</p>
+        <h3>Shared Timer</h3>
+        <p *ngFor="let time of sharedTimer">{{time}}</p>
+        <p>
+            La diferencia entre el timer compartido y el no compartido está en que uno comparte la ejecución de un observable y el 
+            otro tiene una ejecución independiente. Es por eso que los 0 del sharedless timer llegan por separado y los 0 del shared Timer
+            llegan juntos. Claro que la velocidad de llegado no se logra interpretar a menos de que se vea en consola ---->.
+        </p>
+        <p>Se puede ver la ejecución del código en consola</p>
+    </div>
+    <div class="card-footer text-muted">
+        <div  *ngFor="let apunte of apuntes;" class="card">
+            <h4>{{apunte.titulo}}</h4>
+            <p>{{apunte.cuerpo}}</p>
+        </div>
+    </div>
+</div>
