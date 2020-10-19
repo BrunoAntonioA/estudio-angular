@@ -11,16 +11,26 @@ import { Apunte } from '../shared/modelos/apunte.model';
 export class IntervalTimerComponent implements OnInit {
   title ="Interval-Timer"
   apuntes = []
+  interval = {
+    n: 1000,
+    value: 0
+  }
+  timer = {
+    n: 4000,
+    trigger: "Aún no lanzado, esperando por los 10 segundos"
+  }
 
   constructor() { }
 
   ngOnInit(): void {
-    const contador = interval(1000)
-    const time = timer(4000)
+    const contador = interval(this.interval.n)
+    const time = timer(this.timer.n)
     contador.subscribe((n) => {
       console.log('cada ' + n + ' segundos')
+      this.interval.value = n
     })
     time.subscribe(() => {
+      this.timer.trigger = "Triggered"
       console.log('Triggered')
     })
     this.agregarApuntes()

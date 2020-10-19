@@ -3,9 +3,14 @@
         <h2>{{title}}</h2>
     </div>
     <div class="card-body">
-        <p>body</p>
+        <p>Se puede ver la ejecución del código en consola</p>
+        <div #element id="elemento" class="elemento"></div>
+        <p>X: {{posicion.x}} Y: {{posicion.y}}</p>
     </div>
     <div class="card-footer text-muted">
-        footer
+        <div  *ngFor="let apunte of apuntes;" class="card">
+            <h4>{{apunte.titulo}}</h4>
+            <p>{{apunte.cuerpo}}</p>
+        </div>
     </div>
 </div>

@@ -3,7 +3,12 @@
         <h2>{{title}}</h2>
     </div>
     <div class="card-body">
-        <p>Se puede ver la ejecución del código en consola</p>
+        <h5>Notar que el valor de Timer Trigger cambia a los {{timer.n}} ms o {{timer.n/1000}} s</h5>
+        <p>Interval n: {{interval.n}}</p>
+        <p>Interval value: {{interval.value}}</p>
+        <p>Timer n: {{timer.n}}</p>
+        <p>Timer Trigger: {{timer.trigger}}</p>
+        <p class="text-muted">Se puede ver la ejecución del código en consola</p>
     </div>
     <div class="card-footer text-muted">
         <div  *ngFor="let apunte of apuntes;" class="card">
