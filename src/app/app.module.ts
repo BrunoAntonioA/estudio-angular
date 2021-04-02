@@ -22,6 +22,9 @@ import { MergeMapFlatMapComponent } from './merge-map-flat-map/merge-map-flat-ma
 import { ScanComponent } from './scan/scan.component';
 import { SubjectComponent } from './subject/subject.component';
 import { TapComponent } from './tap/tap.component';
+import { CvComponent } from './cv/cv.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { InicioRxjsComponent } from './inicio-rxjs/inicio-rxjs.component';
 
 const appRoutes: Routes = [
   {path: '', component: InicioComponent},
@@ -29,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'rxjs', 
     component: EstudioRxjsComponent,
     children: [
+      {path: '', component: InicioRxjsComponent},
       {path: 'interval-timer', component: IntervalTimerComponent},
       {path: 'fromEvent', component: FromEventComponent},
       {path: 'map-filter', component: MapFilterComponent},
@@ -45,7 +49,8 @@ const appRoutes: Routes = [
       {path: 'subject', component: SubjectComponent},
     ]
   },
-  {path: 'viewchild', component: EstudioViewChildComponent}
+  {path: 'viewchild', component: EstudioViewChildComponent},
+  {path: 'cv', component: CvComponent}
 ]
 
 @NgModule({
@@ -68,7 +73,9 @@ const appRoutes: Routes = [
     MergeMapFlatMapComponent,
     ScanComponent,
     SubjectComponent,
-    TapComponent
+    TapComponent,
+    CvComponent,
+    InicioRxjsComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +84,7 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true}// <-- debugging purposes only
     ),
+    FontAwesomeModule,
   ],
   exports: [RouterModule],
   providers: [],

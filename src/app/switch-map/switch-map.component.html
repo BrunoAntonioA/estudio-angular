@@ -1,1 +1,23 @@
-<p>switch-map works!</p>
+<div class="card text-dark bg-light m-2">
+    <div class="card-header">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="card-body">
+        <p>Se puede ver la ejecución del código en consola</p>
+        <h4>Logs: </h4>
+        <div class="logs">
+            <p *ngFor="let log of logs;">{{log}}</p>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+        <div  *ngFor="let apunte of apuntes;" class="card">
+            <h4>{{apunte.titulo}}</h4>
+            <p>{{apunte.cuerpo}}</p>
+        </div>
+    </div>
+</div>
+<div class="card text-dark bg-light m-2">
+    <button class="btn btn-success mx-4 mt-4 mb-1" #pause id="pause">Pause</button>
+    <button class="btn btn-warning mx-4 mt-1 mb-2" #resume id="resume">Resume</button>
+    <p #remaining id="remaining"></p>
+</div>

@@ -1,0 +1,15 @@
+/*
+.navbar{
+    background-color: rgb(51, 151, 129) !important;
+}
+*/
+
+.dropdown-item:focus{
+    background-color: #59626b !important;
+    color: #FFFFFF !important;
+}
+
+.dropdown-item:hover{
+    background-color: #59626b !important;
+    color: #FFFFFF !important;
+}

@@ -1,1 +1,13 @@
-<p>concat-map works!</p>
+<div class="card text-dark bg-light m-2">
+    <div class="card-header">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="card-body">
+    </div>
+    <div class="card-footer text-muted">
+        <div  *ngFor="let apunte of apuntes;" class="card">
+            <h4>{{apunte.titulo}}</h4>
+            <p>{{apunte.cuerpo}}</p>
+        </div>
+    </div>
+</div>
