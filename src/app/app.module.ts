@@ -25,6 +25,9 @@ import { TapComponent } from './tap/tap.component';
 import { CvComponent } from './cv/cv.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InicioRxjsComponent } from './inicio-rxjs/inicio-rxjs.component';
+import { AustraliaComponent } from './modules/australia/australia.component';
+import { FivetipsComponent } from './modules/australia/sections/fivetips/fivetips.component';
+import { RxJSWriteAngAppComponent } from './modules/australia/sections/rx-jswrite-ang-app/rx-jswrite-ang-app.component';
 
 const appRoutes: Routes = [
   {path: '', component: InicioComponent},
@@ -46,11 +49,17 @@ const appRoutes: Routes = [
       {path: 'concatMap', component: ConcatMapComponent},
       {path: 'mergeMap-flatMap', component: MergeMapFlatMapComponent},
       {path: 'scan', component: ScanComponent},
-      {path: 'subject', component: SubjectComponent},
+      {path: 'subject', component: SubjectComponent}
     ]
   },
   {path: 'viewchild', component: EstudioViewChildComponent},
-  {path: 'cv', component: CvComponent}
+  {path: 'cv', component: CvComponent},
+  {path: 'australia', component: AustraliaComponent,
+    children: [
+      {path: '5tips', component: FivetipsComponent},
+      {path: 'RxjsEasyWay', component: RxJSWriteAngAppComponent}
+    ]
+  }
 ]
 
 @NgModule({
@@ -75,7 +84,10 @@ const appRoutes: Routes = [
     SubjectComponent,
     TapComponent,
     CvComponent,
-    InicioRxjsComponent
+    InicioRxjsComponent,
+    AustraliaComponent,
+    FivetipsComponent,
+    RxJSWriteAngAppComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<div class="card text-dark bg-light m-2">
+    <div class="card-header">
+        <h2>{{title}}</h2>
+        <a href="{{link}}"> Video</a>
+    </div>
+    <div class="card-body">
+    </div>
+    <div class="card-footer text-muted">
+        <div  *ngFor="let note of notes;" class="card">
+            <h4>{{note.title}}</h4>
+            <p>{{note.body}}</p>
+        </div>
+    </div>
+</div>
